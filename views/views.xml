@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+        <record id="view_rutestlvv_form" model="ir.ui.view">
+            <field name="name">res.partner.rutestlvv.inherit</field>
+            <field name="model">res.partner</field>
+            <field name="inherit_id" ref="base.view_partner_form"/>
+            <field name="arch" type="xml">
+                <xpath expr="//notebook[last()]" position="inside">
+                    <page string="Ventas Periodicas">
+                        <group col="2">
+                            <group>
+                                <field name="testssss1"/>
+                                <field name="testssss3"/>
+                            </group>
+                            <group>
+                                <field name="testssss2"/>
+                                <field name="testssss4"/>
+                            </group>
+                        </group>
+                        <button name="store_my_res_partner_specialdata" string="Agregar" type="object"/>
+                    </page>
+                </xpath>
+            </field>
+        </record>
+</odoo>

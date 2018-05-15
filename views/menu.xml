@@ -1,0 +1,209 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+	<data>
+
+        <record model="ir.ui.view" id="jthsalesplugg.reporte_semanal_form">
+            <field name="name">name_id.form</field>
+            <field name="model">res.partner</field>
+            <field name="arch" type="xml">
+                <form string="Reporte Semanal" create="false" edit="false">
+<!-- Bootstrap -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"></link><script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script><script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script><!--<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCFpZfjPjQuEHMKiFtNqu7qqSclm6gA0RU"></script>--> 
+
+
+        <!--  VIEW  -->
+
+                    <div style="width:800px;height:700px;margin-left:20%;background-color:#b9e7ff;border:0;-webkit-border-radius: 15px;-moz-border-radius: 15px;border-radius: 15px;">   
+
+                        <h1 style="text-align:center;">RUTAS</h1>
+
+                        <iframe src="//192.168.1.142/map.html" style="width:600px;height:400px;border:0;margin-left: 11%;"></iframe>
+
+                        <table class="table table-bordered">
+                            <thead>
+                              <tr>
+                                <th>Dia</th>
+                                <th>Pedido</th>
+                                <th>Planificacion</th>
+                                <th>Efectividad</th>
+                                <th>Tendencia</th>
+                              </tr>
+                            </thead>
+                            <tbody>
+                              <tr>
+                                <td>John</td>
+                                <td>Doe</td>
+                                <td>john@example.com</td>
+                                <td>Doe</td>
+                                <td>Doe</td>
+                              </tr>
+                              <tr>
+                                <td>Mary</td>
+                                <td>Moe</td>
+                                <td>mary@example.com</td>
+                                <td>Doe</td>
+                                <td>Doe</td>
+                              </tr>
+                              <tr>
+                                <td>July</td>
+                                <td>Dooley</td>
+                                <td>july@example.com</td>
+                                <td>Doe</td>
+                                <td>Doe</td>
+                              </tr>
+                            </tbody>
+                          </table>
+
+                          <div class="row" style="padding-left: 3%;padding-right: 5%;">
+                              <div class="col-md-4">Tendencia</div>
+                              <div class="col-md-1" style="border:1px solid black;text-align:center;">2</div>
+                              <div class="col-md-1"></div>
+                              <div class="col-md-4">Efectividad Sem</div>
+                              <div class="col-md-1" style="border:1px solid black;text-align:center;">3</div>
+                              <div class="col-md-1"></div>
+                          </div>
+
+                        <script type="text/javascript">
+
+                            $(document).ready(function(){
+                            $('.o_control_panel').hide();
+                            //JSON.stringify(json_data)
+                                $.ajax({
+                                  url: "http://localhost:8069/test/test",
+                                  beforeSend: function( xhr ) {
+                                    xhr.overrideMimeType( "text/plain; charset=x-user-defined" );
+                                  }
+                                })
+                                .done(function( data ) {
+                                    //console.log( "Sample of data:", data );
+                                    data = JSON.parse(data);
+                                    //console.log(data);
+                                    $.each(data, function( index, value ) {
+                                        console.log(value);
+                                    });
+                                });
+
+                            });
+                        </script>
+                    </div>
+                </form>
+            </field>
+        </record>
+
+<record model="ir.ui.view" id="jthsalesplugg.reporte_diario_form">
+            <field name="name">name_id.form</field>
+            <field name="model">res.partner</field>
+            <field name="arch" type="xml">
+                <form string="Reporte Semanal" create="false" edit="false">
+<!-- Bootstrap -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"></link><script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script><script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script><!--<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCFpZfjPjQuEHMKiFtNqu7qqSclm6gA0RU"></script>--> 
+
+
+        <!--  VIEW  -->
+
+                    <div style="width:800px;height:700px;margin-left:20%;background-color:#b9e7ff;border:0;-webkit-border-radius: 15px;-moz-border-radius: 15px;border-radius: 15px;">   
+
+                        <h1 style="text-align:center;">RUTA PROPUESTA</h1>
+
+                        <iframe src="//localhost/map.html" style="width:600px;height:400px;border:0;margin-left: 11%;"></iframe>
+
+                        <table class="table table-bordered">
+                            <thead>
+                              <tr>
+                                <th>Cliente</th>
+                                <th>Pedido</th>
+                                <th>Planificacion</th>
+                                <th>Efectividad</th>
+                                <th>Tendencia</th>
+                              </tr>
+                            </thead>
+                            <tbody>
+                              <tr>
+                                <td>John</td>
+                                <td>Doe</td>
+                                <td>john@example.com</td>
+                                <td>Doe</td>
+                                <td>Doe</td>
+                              </tr>
+                              <tr>
+                                <td>Mary</td>
+                                <td>Moe</td>
+                                <td>mary@example.com</td>
+                                <td>Doe</td>
+                                <td>Doe</td>
+                              </tr>
+                              <tr>
+                                <td>July</td>
+                                <td>Dooley</td>
+                                <td>july@example.com</td>
+                                <td>Doe</td>
+                                <td>Doe</td>
+                              </tr>
+                            </tbody>
+                          </table>
+
+                          <div class="row" style="padding-left: 3%;padding-right: 5%;">
+                              <div class="col-md-4">Efectividad Ruta</div>
+                              <div class="col-md-1" style="border:1px solid black;text-align:center;">2</div>
+                              <div class="col-md-1"></div>
+                              <div class="col-md-4">Efectividad Día</div>
+                              <div class="col-md-1" style="border:1px solid black;text-align:center;">3</div>
+                              <div class="col-md-1"></div>
+                          </div>
+
+                        <script type="text/javascript">
+
+                            $(document).ready(function(){
+                            $('.o_control_panel').hide();
+                            //JSON.stringify(json_data)
+                                $.ajax({
+                                  url: "http://localhost:8069/test/test",
+                                  beforeSend: function( xhr ) {
+                                    xhr.overrideMimeType( "text/plain; charset=x-user-defined" );
+                                  }
+                                })
+                                .done(function( data ) {
+                                    //console.log( "Sample of data:", data );
+                                    data = JSON.parse(data);
+                                    //console.log(data);
+                                    $.each(data, function( index, value ) {
+                                        console.log(value);
+                                    });
+                                });
+
+                            });
+                        </script>
+                    </div>
+                </form>
+            </field>
+        </record>
+
+		<record id="jthsalesplugg.reportes_ventas_diario_jth_action" model="ir.actions.act_window">
+            <field name="name">reporte.ventas.diario</field>
+            <field name="res_model">res.partner</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">form</field>
+            <field name="view_id" ref="jthsalesplugg.reporte_diario_form" />
+        </record>
+
+        <record id="jthsalesplugg.reportes_ventas_semanal_jth_action" model="ir.actions.act_window">
+            <field name="name">reporte.ventas.semanal</field>
+            <field name="res_model">res.partner</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">form</field>
+            <field name="view_id" ref="jthsalesplugg.reporte_semanal_form" />
+        </record>
+		
+        <menuitem
+            name="Reporte Diario" 
+            id="jthsalesplugg.menu_reportes_ventas_diario_jth"
+            action="jthsalesplugg.reportes_ventas_diario_jth_action"
+            parent='sale.menu_report_product_all' />
+
+        <menuitem
+            name="Reporte Semanal" 
+            id="jthsalesplugg.menu_reportes_ventas_semanal_jth"
+            action="jthsalesplugg.reportes_ventas_semanal_jth_action"
+            parent='sale.menu_report_product_all' />
+	</data>
+</odoo>
